@@ -1,7 +1,7 @@
 plugins {
     id("java")
-    id("maven")
-    id ("com.github.johnrengelman.shadow") version "7.1.2"
+    id("maven-publish")
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "org.velocy"
@@ -25,4 +25,15 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = groupId
+            artifactId = project.name
+            version = version
+            from(components["java"])
+        }
+    }
 }
