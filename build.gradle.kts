@@ -26,10 +26,3 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
-
-val build: Task by tasks
-val shadowJar: Task by tasks
-
-build.apply {
-    dependsOn(shadowJar)
-}
