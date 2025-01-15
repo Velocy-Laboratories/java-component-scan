@@ -1,8 +1,11 @@
 # java-component-scan
 
+
 Find annotations inside classed, methods and fields.
 
 ## Installation
+
+[![](https://jitpack.io/v/org.velocy/java-component-scan.svg)](https://jitpack.io/#org.velocy/java-component-scan)
 
 Maven
 ```xml
